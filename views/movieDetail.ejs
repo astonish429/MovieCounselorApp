@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <% include header %>
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="/stylesheets/movieDetail.css">
+</head>
+<body>
+    
+<div class="outerBox">
+    <!-- main image Box -->
+    <div class="imageBox">
+      <img src="<%= imageUrl + parsedDetail.poster_path %>" class="poster-img" alt="movie">
+      <!-- sub images part -->
+      <div class="sub-images">
+          <!-- backdrop-imgage 1 -->
+          <div class="backdrop-img1">
+              <img src="<%= imageUrl + parsedDetail.backdrop_path %>" alt="backdrop-img1">
+          </div>
+          <!-- backdrop-imgage 2 -->
+          <div class="backdrop-img2">
+            <img src="<%= imageUrl + parsedDetail.poster_path %>" alt="backdrop-img2">
+        </div>
+      </div>
+    </div>
+
+    <!-- detailBox -->
+
+        <div class="detailBox">
+            <!-- Main detail at top -->
+            <div class="mainDetail">
+                <!-- title and homepage link -->
+                <div class="titleAndHome">
+                    <h2 class="title"><%= parsedDetail.original_title %></h2>
+                    <a href="<%= parsedDetail.homepage %>" target="_blank" class="homepage">See homepage&nbsp;<i class="fa fa-paper-plane"></i></a>
+                </div>
+            <!-- genre of movie -->
+                <h2 class="genre">(Genre : <span><%= parsedDetail.genres[0].name %>)</span></h2>
+
+            </div>
+
+            <!-- overview section -->
+            <div class="overview">
+                <h3 style="text-align: center; margin-top: 1rem;">Overview : </h3>
+                <p> 
+                   <%= parsedDetail.overview %>  
+                </p>
+            </div>
+
+            <!-- other details of movie -->
+              <div class="otherDetail">
+                <center>
+                 <div class="info" ><hr><span>Information</span><hr></div>
+                </center> 
+                    <table>
+                        <tr>
+                        <th><h3>Release Date</h3></th>
+                        <td><%= parsedDetail.release_date %></td>
+                    </tr>
+                    <tr>
+                        <th><h3>Total Budget</h3></th>
+                        <td>$ <%= parsedDetail.budget %></td>
+                    </tr>
+                        <tr>
+                        <th><h3>Total Revenue</h3></th>
+                        <td>$ <%= parsedDetail.revenue %></td>  
+                        </tr>
+                    </table>
+                 
+        </div>
+         <center>
+        <button class="production">Know More</button>
+       </center>   
+        </div> <!-- end of detail box -->
+ </div> <!--end of outerBox -->
+
+
+<% include footer %>

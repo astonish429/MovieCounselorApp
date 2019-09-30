@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+/*------------------------ JUMBOTRON STYLING -----------------------*/
+.jumbotron {
+  width: 100%;
+  height: 50rem;
+  position: relative;
+  background-image: url("/images/movie-jumbo.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  margin: 0; }
+  .jumbotron .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4.4rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #eee;
+    text-shadow: 3px 3px 3px #000; }
+    .jumbotron .title hr {
+      background: #1d1d1d; }
+  .jumbotron .head-part {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.726);
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .jumbotron .head-part .main-logo {
+      width: 20rem;
+      height: 5rem; }
+    .jumbotron .head-part form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* ---------------- SEARCHBAR STYLING ------------------------------------------  */ }
+      .jumbotron .head-part form .category {
+        width: 20rem;
+        height: 3rem;
+        margin-right: 1rem;
+        border: 1px solid #1d1d1d;
+        font-size: 1.5rem; }
+      .jumbotron .head-part form .searchBox {
+        background: #fff;
+        border-radius: 2rem;
+        padding: .5rem 1rem; }
+        .jumbotron .head-part form .searchBox .searchBar {
+          background: none;
+          border: none;
+          font-size: 1.4rem;
+          outline: none;
+          color: #333;
+          width: 15rem;
+          transition: all linear 0.45s; }
+        .jumbotron .head-part form .searchBox .search-icon {
+          background: #fbc531;
+          color: #fff;
+          border-radius: 50%;
+          padding: .7rem;
+          transition: all linear 0.45s; }
+          .jumbotron .head-part form .searchBox .search-icon:hover {
+            transform: rotate(360deg); }
+
+.movie_gallery {
+  padding: 2rem;
+  background: #eee; }
+  .movie_gallery .movie_gallery--title {
+    margin-top: 4rem;
+    display: flex;
+    width: 30rem;
+    justify-content: space-between;
+    align-items: center; }
+    .movie_gallery .movie_gallery--title hr {
+      width: 4rem;
+      background: #1d1d1d; }
+    .movie_gallery .movie_gallery--title h1 {
+      font-size: 2.2rem;
+      color: #1d1d1d; }
+      .movie_gallery .movie_gallery--title h1 span {
+        color: #fbc531; }
+  .movie_gallery .movie-posters-row {
+    margin-top: 6rem; }
+    .movie_gallery .movie-posters-row .movie-poster-column {
+      margin-bottom: 5rem; }
+      .movie_gallery .movie-posters-row .movie-poster-column .poster-img {
+        box-shadow: 0 0 7px #1d1d1d;
+        padding: 1rem;
+        width: 90%;
+        background: #fff;
+        z-index: -1; }
+      

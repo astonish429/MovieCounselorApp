@@ -1,0 +1,23 @@
+{
+  "name": "expresssaviour",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "compile:sass1" : "node-sass ./sass/main.scss ./public/stylesheets/style.css -w",
+    "compile:sass2" : "node-sass ./sass/movie-detail.scss ./public/stylesheets/movieDetail.css -w" 
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "helmet": "^3.20.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  }
+}

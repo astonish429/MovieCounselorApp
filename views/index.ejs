@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie Counselor</title>
+
+      <% include header %>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    
+ <!-- ************************ JUMBOTRON SECTION ********************************* -->
+
+    <div class="jumbotron">
+        
+        <h1 class="title"><hr> Movies <hr></h1>
+        
+        
+         <div class="head-part">
+             
+             <img src="/images/logo.png" class="main-logo">
+             
+             <form action="/search" method="POST">
+                <select name="category" class="category">
+                  <option value="Movie">Movie</option>
+                  <option value="Actor">Actor</option>
+                </select>
+
+                <div class="searchBox">
+                  <input type="search" placeholder="Search..." class="searchBar">
+                  <a href="#"><i class="fa fa-search search-icon"></i></a> 
+                </div>
+                
+            </form>
+   
+         </div>
+
+    </div>
+
+ <!-- ************************ MOVIE GALLERY SECTION ********************************* -->
+
+<div class="container-fluid movie_gallery">
+      <center>   
+        <div class="movie_gallery--title">
+          <hr> 
+          <h1>TRENDING <span>MOVIES</span></h1>
+          <hr>
+    </div></center>
+    
+   <div class="container"> 
+      <div class="row movie-posters-row">
+       
+         <% parsedData.forEach((movie) =>{ %>    
+          
+          <div class="col-md-4 col-sm-6 movie-poster-column"">
+         
+            <a href="/movieDetail/<%= movie.id %>">
+              <img src="<%=imageUrl + movie.poster_path %>" class="img-responsive poster-img" alt="poster image" />
+            </a> 
+         
+        </div>
+      
+        <% }) %>
+       
+      
+      </div>
+  </div>
+
+</div>
+
+
+    
+<% include footer %>

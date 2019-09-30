@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+a:link, a:active, a:visited {
+  text-decoration: none !important; }
+
+h3 {
+  font-size: 1.9rem;
+  color: #111;
+  font-weight: 600; }
+
+.outerBox {
+  width: 100%;
+  display: flex; }
+  .outerBox .imageBox {
+    width: 60%;
+    padding: 2rem;
+    border-right: 1px solid #dbdbdb; }
+    .outerBox .imageBox .poster-img {
+      width: 100%;
+      height: 50rem;
+      object-fit: cover;
+      object-position: top left; }
+    .outerBox .imageBox .sub-images {
+      margin-top: 2rem;
+      width: 100%;
+      display: flex; }
+      .outerBox .imageBox .sub-images .backdrop-img1, .outerBox .imageBox .sub-images .backdrop-img2 {
+        width: calc(50% - 1rem);
+        height: 20rem; }
+      .outerBox .imageBox .sub-images .backdrop-img1 img {
+        margin-right: 1rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+      .outerBox .imageBox .sub-images .backdrop-img2 img {
+        margin-left: 1rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+        filter: grayscale(90%); }
+  .outerBox .detailBox {
+    width: 40%;
+    height: 100%;
+    padding: 2rem; }
+    .outerBox .detailBox .mainDetail {
+      padding: 1.5rem 1rem;
+      border-bottom: 1px solid #dbdbdb; }
+      .outerBox .detailBox .mainDetail .titleAndHome {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .outerBox .detailBox .mainDetail .titleAndHome .title {
+          font-size: 2.4rem;
+          font-weight: 600;
+          color: #1d1d1d; }
+        .outerBox .detailBox .mainDetail .titleAndHome .homepage {
+          color: #ea5455;
+          font-size: 1.8rem; }
+      .outerBox .detailBox .mainDetail .genre {
+        font-size: 1.9rem;
+        color: #ea5455;
+        font-weight: 700;
+        margin-top: 1.5rem; }
+    .outerBox .detailBox .overview {
+      padding: 1.5rem 1rem;
+      border-bottom: 1px solid #dbdbdb; }
+      .outerBox .detailBox .overview p {
+        margin-top: 2rem;
+        color: #666;
+        font-size: 1.7rem;
+        line-height: 1.8; }
+    .outerBox .detailBox .otherDetail {
+      padding: 1.5rem 1rem;
+      border-bottom: 1px solid #dbdbdb; }
+      .outerBox .detailBox .otherDetail .info {
+        width: 9rem;
+        color: #1d1d1d;
+        font-size: 2rem;
+        margin-bottom: 2rem; }
+      .outerBox .detailBox .otherDetail table {
+        width: 45rem; }
+      .outerBox .detailBox .otherDetail table, .outerBox .detailBox .otherDetail th, .outerBox .detailBox .otherDetail td {
+        border: 1px solid #1d1d1d;
+        border-collapse: collapse; }
+      .outerBox .detailBox .otherDetail th, .outerBox .detailBox .otherDetail td {
+        padding: 1.5rem; }
+      .outerBox .detailBox .otherDetail td {
+        color: #222;
+        font-size: 1.6rem;
+        font-weight: 400; }
+    .outerBox .detailBox .production {
+      margin: 4rem 0;
+      padding: 1rem 2.5rem;
+      border: none;
+      outline: none;
+      color: #fff;
+      background: linear-gradient(45deg, #ea5455, #feb692);
+      transition: all .3s ease-in;
+      font-size: 2rem;
+      box-shadow: 3px 3px 10px #ccc; }
+      .outerBox .detailBox .production:hover {
+        background: linear-gradient(65deg, #feb692, #ea5455);
+        transform: translateY(-2px); }
